@@ -1,0 +1,6 @@
+framework module Pods_IkaSportsTests {
+  umbrella header "Pods-IkaSportsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
