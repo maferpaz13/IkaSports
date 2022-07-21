@@ -19,6 +19,7 @@
 		DDD6661B2889E93B00F2337B /* IkaSportsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD6661A2889E93B00F2337B /* IkaSportsTests.swift */; };
 		DDD666252889E93B00F2337B /* IkaSportsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD666242889E93B00F2337B /* IkaSportsUITests.swift */; };
 		DDD666272889E93B00F2337B /* IkaSportsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD666262889E93B00F2337B /* IkaSportsUITestsLaunchTests.swift */; };
+		DDD666342889EDF800F2337B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDD666332889EDF800F2337B /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		DDD666202889E93B00F2337B /* IkaSportsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IkaSportsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD666242889E93B00F2337B /* IkaSportsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IkaSportsUITests.swift; sourceTree = "<group>"; };
 		DDD666262889E93B00F2337B /* IkaSportsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IkaSportsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DDD666332889EDF800F2337B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		E053ED028CA97D2537FC9198 /* Pods-IkaSportsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IkaSportsTests.debug.xcconfig"; path = "Target Support Files/Pods-IkaSportsTests/Pods-IkaSportsTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,7 +113,6 @@
 				E053ED028CA97D2537FC9198 /* Pods-IkaSportsTests.debug.xcconfig */,
 				CF049A86535737E0C00ABFF8 /* Pods-IkaSportsTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -147,6 +148,7 @@
 				DDD6660C2889E93B00F2337B /* Assets.xcassets */,
 				DDD6660E2889E93B00F2337B /* LaunchScreen.storyboard */,
 				DDD666112889E93B00F2337B /* Info.plist */,
+				DDD666332889EDF800F2337B /* Colors.xcassets */,
 			);
 			path = IkaSports;
 			sourceTree = "<group>";
@@ -278,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDD666102889E93B00F2337B /* LaunchScreen.storyboard in Resources */,
+				DDD666342889EDF800F2337B /* Colors.xcassets in Resources */,
 				DDD6660D2889E93B00F2337B /* Assets.xcassets in Resources */,
 				DDD6660B2889E93A00F2337B /* Main.storyboard in Resources */,
 			);
