@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Validation View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController wantsFullScreenLayout="YES" id="Y6W-OH-hqX" customClass="ValidationViewController" customModule="IkaSports" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchscreen" translatesAutoresizingMaskIntoConstraints="NO" id="U1b-qi-jX1">
+                                <rect key="frame" x="106" y="370.5" width="202.5" height="165.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="202.5" id="ax6-ga-hGt"/>
+                                    <constraint firstAttribute="height" constant="165.5" id="gS8-1T-KEN"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="MoradoBackground"/>
+                        <constraints>
+                            <constraint firstItem="U1b-qi-jX1" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="RVj-dz-Fha"/>
+                            <constraint firstItem="U1b-qi-jX1" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="dCx-y0-Z2O"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="BNz-dK-6AT" kind="presentation" identifier="showMain" modalPresentationStyle="fullScreen" id="1Lt-mI-NL9"/>
+                        <segue destination="cRH-fZ-2da" kind="presentation" identifier="showOnBoarding" modalPresentationStyle="fullScreen" id="qD4-xI-2PU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32" y="36"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="a3v-qs-4YS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="Main" id="BNz-dK-6AT" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Bgt-OA-TuK"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="egh-HG-Gsk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="670" y="-65"/>
+        </scene>
+        <!--onboarding-->
+        <scene sceneID="IKK-hg-mKN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="OnBoarding" referencedIdentifier="onboarding" id="cRH-fZ-2da" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="rHY-bi-5wV"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FcA-sk-9mW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="690" y="126"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="launchscreen" width="202.5" height="165.5"/>
+        <namedColor name="MoradoBackground">
+            <color red="0.19607843137254902" green="0.086274509803921567" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

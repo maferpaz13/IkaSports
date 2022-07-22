@@ -10,6 +10,8 @@
 		A8694063BFE0F84C1C5F4E4D /* Pods_IkaSports_IkaSportsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C1A3CE705C3B17856B0CB9 /* Pods_IkaSports_IkaSportsUITests.framework */; };
 		AB6C0D594DD6900A24AC38FE /* Pods_IkaSportsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F143F0C9CC4AEFDB9A2B44C /* Pods_IkaSportsTests.framework */; };
 		D1E216A87EEBDFAAB0F3BB88 /* Pods_IkaSports.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87DE2C8C358A566BD7919814 /* Pods_IkaSports.framework */; };
+		DDD57066288AED57009BDAC5 /* ValidationView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDD57065288AED57009BDAC5 /* ValidationView.storyboard */; };
+		DDD57068288AED6E009BDAC5 /* ValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD57067288AED6E009BDAC5 /* ValidationViewController.swift */; };
 		DDD666042889E93A00F2337B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD666032889E93A00F2337B /* AppDelegate.swift */; };
 		DDD666062889E93A00F2337B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD666052889E93A00F2337B /* SceneDelegate.swift */; };
 		DDD666082889E93A00F2337B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD666072889E93A00F2337B /* ViewController.swift */; };
@@ -60,6 +62,8 @@
 		A91179026D8AA0D7DED16CF9 /* Pods-IkaSports.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IkaSports.release.xcconfig"; path = "Target Support Files/Pods-IkaSports/Pods-IkaSports.release.xcconfig"; sourceTree = "<group>"; };
 		CF049A86535737E0C00ABFF8 /* Pods-IkaSportsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IkaSportsTests.release.xcconfig"; path = "Target Support Files/Pods-IkaSportsTests/Pods-IkaSportsTests.release.xcconfig"; sourceTree = "<group>"; };
 		D5C1A3CE705C3B17856B0CB9 /* Pods_IkaSports_IkaSportsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IkaSports_IkaSportsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDD57065288AED57009BDAC5 /* ValidationView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ValidationView.storyboard; sourceTree = "<group>"; };
+		DDD57067288AED6E009BDAC5 /* ValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationViewController.swift; sourceTree = "<group>"; };
 		DDD666002889E93A00F2337B /* IkaSports.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IkaSports.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD666032889E93A00F2337B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDD666052889E93A00F2337B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,10 +144,20 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		DDD57064288AED3F009BDAC5 /* ValidationView */ = {
+			isa = PBXGroup;
+			children = (
+				DDD57065288AED57009BDAC5 /* ValidationView.storyboard */,
+				DDD57067288AED6E009BDAC5 /* ValidationViewController.swift */,
+			);
+			path = ValidationView;
+			sourceTree = "<group>";
+		};
 		DDD665F72889E93A00F2337B = {
 			isa = PBXGroup;
 			children = (
 				DDD666022889E93A00F2337B /* IkaSports */,
+				DDD57064288AED3F009BDAC5 /* ValidationView */,
 				DDD666352889FDED00F2337B /* OnBoarding */,
 				DDD66641288A416500F2337B /* Commos */,
 				DDD666192889E93B00F2337B /* IkaSportsTests */,
@@ -367,6 +381,7 @@
 				DDD6663E288A360B00F2337B /* DeportesCell.xib in Resources */,
 				DDD666342889EDF800F2337B /* Colors.xcassets in Resources */,
 				DDD6660D2889E93B00F2337B /* Assets.xcassets in Resources */,
+				DDD57066288AED57009BDAC5 /* ValidationView.storyboard in Resources */,
 				DDD666372889FE1400F2337B /* OnBoarding.storyboard in Resources */,
 				DDD6660B2889E93A00F2337B /* Main.storyboard in Resources */,
 			);
@@ -499,6 +514,7 @@
 				DDD666082889E93A00F2337B /* ViewController.swift in Sources */,
 				DDD666042889E93A00F2337B /* AppDelegate.swift in Sources */,
 				DDD666062889E93A00F2337B /* SceneDelegate.swift in Sources */,
+				DDD57068288AED6E009BDAC5 /* ValidationViewController.swift in Sources */,
 				DDD6664A288A430C00F2337B /* DeportesAPIClient.swift in Sources */,
 				DDD66643288A418900F2337B /* EndPoints.swift in Sources */,
 				DDD66640288A3B1E00F2337B /* DeportesTableViewCell.swift in Sources */,
@@ -691,9 +707,10 @@
 				INFOPLIST_FILE = IkaSports/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = OnBoarding;
+				INFOPLIST_KEY_UIMainStoryboardFile = ValidationView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -703,7 +720,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -720,9 +737,10 @@
 				INFOPLIST_FILE = IkaSports/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = OnBoarding;
+				INFOPLIST_KEY_UIMainStoryboardFile = ValidationView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -732,7 +750,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

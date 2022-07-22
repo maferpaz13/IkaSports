@@ -20,6 +20,8 @@ class OnBoardingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let defaults = UserDefaults.standard
+        defaults.set(true, forKey: "Inicioono")
         setUpUI()
         
     }
