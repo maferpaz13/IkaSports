@@ -20,6 +20,9 @@
 		DDD666252889E93B00F2337B /* IkaSportsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD666242889E93B00F2337B /* IkaSportsUITests.swift */; };
 		DDD666272889E93B00F2337B /* IkaSportsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD666262889E93B00F2337B /* IkaSportsUITestsLaunchTests.swift */; };
 		DDD666342889EDF800F2337B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDD666332889EDF800F2337B /* Colors.xcassets */; };
+		DDD666372889FE1400F2337B /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDD666362889FE1400F2337B /* OnBoarding.storyboard */; };
+		DDD66639288A0FAF00F2337B /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD66638288A0FAF00F2337B /* OnBoardingCollectionViewCell.swift */; };
+		DDD6663B288A106800F2337B /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD6663A288A106800F2337B /* OnBoardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		DDD666242889E93B00F2337B /* IkaSportsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IkaSportsUITests.swift; sourceTree = "<group>"; };
 		DDD666262889E93B00F2337B /* IkaSportsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IkaSportsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DDD666332889EDF800F2337B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		DDD666362889FE1400F2337B /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
+		DDD66638288A0FAF00F2337B /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		DDD6663A288A106800F2337B /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		E053ED028CA97D2537FC9198 /* Pods-IkaSportsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IkaSportsTests.debug.xcconfig"; path = "Target Support Files/Pods-IkaSportsTests/Pods-IkaSportsTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				DDD666022889E93A00F2337B /* IkaSports */,
+				DDD666352889FDED00F2337B /* OnBoarding */,
 				DDD666192889E93B00F2337B /* IkaSportsTests */,
 				DDD666232889E93B00F2337B /* IkaSportsUITests */,
 				DDD666012889E93A00F2337B /* Products */,
@@ -168,6 +175,16 @@
 				DDD666262889E93B00F2337B /* IkaSportsUITestsLaunchTests.swift */,
 			);
 			path = IkaSportsUITests;
+			sourceTree = "<group>";
+		};
+		DDD666352889FDED00F2337B /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				DDD666362889FE1400F2337B /* OnBoarding.storyboard */,
+				DDD66638288A0FAF00F2337B /* OnBoardingCollectionViewCell.swift */,
+				DDD6663A288A106800F2337B /* OnBoardingViewController.swift */,
+			);
+			path = OnBoarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +299,7 @@
 				DDD666102889E93B00F2337B /* LaunchScreen.storyboard in Resources */,
 				DDD666342889EDF800F2337B /* Colors.xcassets in Resources */,
 				DDD6660D2889E93B00F2337B /* Assets.xcassets in Resources */,
+				DDD666372889FE1400F2337B /* OnBoarding.storyboard in Resources */,
 				DDD6660B2889E93A00F2337B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +431,8 @@
 				DDD666082889E93A00F2337B /* ViewController.swift in Sources */,
 				DDD666042889E93A00F2337B /* AppDelegate.swift in Sources */,
 				DDD666062889E93A00F2337B /* SceneDelegate.swift in Sources */,
+				DDD66639288A0FAF00F2337B /* OnBoardingCollectionViewCell.swift in Sources */,
+				DDD6663B288A106800F2337B /* OnBoardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,7 +615,7 @@
 				INFOPLIST_FILE = IkaSports/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = OnBoading;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -624,7 +644,7 @@
 				INFOPLIST_FILE = IkaSports/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = OnBoading;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
