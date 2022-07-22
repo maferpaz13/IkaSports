@@ -8,7 +8,7 @@
 import UIKit
 
 class OnBoardingCollectionViewCell: UICollectionViewCell {
-    
+    //MARK: - IBOutlets
     @IBOutlet var ImagenFondo : UIImageView!
     @IBOutlet var titulo1 : UILabel!
     @IBOutlet var SaltarButton : UIButton!
@@ -45,12 +45,14 @@ extension OnBoardingViewController : UICollectionViewDelegate, UICollectionViewD
         
         return cell!
         }
+    //IMPORTANTE!!
+    //cambiar el "Stimate Size", de "automatic" a "None"
+    //funcion para dar tamaño a las celdas del collectionview
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let size = UIScreen.main.bounds
-        print("si entre \(self.view.frame.width)")
         return CGSize(width: self.view.frame.width, height: self.view.frame.height)
         
-    }
+        }
     }
 

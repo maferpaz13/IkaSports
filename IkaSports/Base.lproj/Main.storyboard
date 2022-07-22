@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PI4-ky-Jdi">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -15,16 +15,97 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deportes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnr-3D-tOc">
+                                <rect key="frame" x="20" y="64" width="99.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bkR-ld-FZT">
+                                <rect key="frame" x="0.0" y="148" width="414" height="748"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="HKp-8c-VOr"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="scY-5Y-nev"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vj8-Xv-9ki">
+                                <rect key="frame" x="10" y="104" width="394" height="36"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loupe" translatesAutoresizingMaskIntoConstraints="NO" id="Gpp-fe-mEe">
+                                        <rect key="frame" x="8" y="5.5" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="2Gk-Ph-JsM"/>
+                                            <constraint firstAttribute="width" constant="25" id="IZn-fj-s8Q"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Buscar Deporte..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mXf-2f-83j">
+                                        <rect key="frame" x="41" y="9" width="337" height="18.5"/>
+                                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="18.5" id="1ze-Qs-Hh2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="mXf-2f-83j" firstAttribute="leading" secondItem="Gpp-fe-mEe" secondAttribute="trailing" constant="8" id="3st-i2-VwJ"/>
+                                    <constraint firstItem="Gpp-fe-mEe" firstAttribute="leading" secondItem="Vj8-Xv-9ki" secondAttribute="leading" constant="8" id="Cph-7V-w1a"/>
+                                    <constraint firstItem="mXf-2f-83j" firstAttribute="centerY" secondItem="Vj8-Xv-9ki" secondAttribute="centerY" id="O8y-6r-LcB"/>
+                                    <constraint firstAttribute="height" constant="36" id="Pcx-6f-q35"/>
+                                    <constraint firstItem="Gpp-fe-mEe" firstAttribute="centerY" secondItem="mXf-2f-83j" secondAttribute="centerY" id="VOo-rF-1ym"/>
+                                    <constraint firstAttribute="trailing" secondItem="mXf-2f-83j" secondAttribute="trailing" constant="16" id="WFf-NC-9k4"/>
+                                    <constraint firstItem="Gpp-fe-mEe" firstAttribute="centerY" secondItem="Vj8-Xv-9ki" secondAttribute="centerY" id="h1O-H7-wjl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bkR-ld-FZT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CXD-Vk-se8"/>
+                            <constraint firstItem="Vj8-Xv-9ki" firstAttribute="top" secondItem="lnr-3D-tOc" secondAttribute="bottom" constant="10" id="Oxc-KG-swh"/>
+                            <constraint firstItem="lnr-3D-tOc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Teh-ZU-9iR"/>
+                            <constraint firstItem="lnr-3D-tOc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="UD8-BI-OgY"/>
+                            <constraint firstItem="bkR-ld-FZT" firstAttribute="top" secondItem="Vj8-Xv-9ki" secondAttribute="bottom" constant="8" id="aTp-RC-IgK"/>
+                            <constraint firstAttribute="bottom" secondItem="bkR-ld-FZT" secondAttribute="bottom" id="itu-3R-MOj"/>
+                            <constraint firstItem="bkR-ld-FZT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="n6E-1c-koi"/>
+                            <constraint firstItem="Vj8-Xv-9ki" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="q7i-uq-9mL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vj8-Xv-9ki" secondAttribute="trailing" constant="10" id="sKc-IO-fx7"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="8gB-rU-C2c"/>
+                    <connections>
+                        <outlet property="Buscador" destination="mXf-2f-83j" id="0Hx-AO-J5Q"/>
+                        <outlet property="tableView" destination="bkR-ld-FZT" id="Mcp-mx-tBV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14" y="13"/>
+            <point key="canvasLocation" x="923.1884057971015" y="12.723214285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nzN-sj-ePF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="PI4-ky-Jdi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IXI-V8-Dgn">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QqV-rI-XtH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6zX-6v-Pig" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13.043478260869566" y="12.723214285714285"/>
         </scene>
     </scenes>
     <resources>
+        <image name="loupe" width="64" height="64"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -4,6 +4,33 @@
 <dict>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
+		<key>NSAppTransportSecurity</key>
+		<dict>
+			<key>NSAllowsArbitraryLoads</key>
+			<false/>
+			<key>NSExceptionDomains</key>
+			<dict>
+				<key>https://www.thesportsdb.com/api/v1/json/2</key>
+				<dict>
+					<key>NSExceptionAllowsInsecureHTTPLoads</key>
+					<true/>
+					<key>NSExceptionMinimumTLSVersion</key>
+					<string>TLSv1.2</string>
+					<key>NSExceptionRequiresForwardSecrecy</key>
+					<true/>
+					<key>NSIncludesSubdomains</key>
+					<true/>
+					<key>NSRequiresCertificateTransparency</key>
+					<false/>
+					<key>NSThirdPartyExceptionAllowsInsecureHTTPLoads</key>
+					<false/>
+					<key>NSThirdPartyExceptionMinimumTLSVersion</key>
+					<string>TLSv1.2</string>
+					<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+					<true/>
+				</dict>
+			</dict>
+		</dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
 		<false/>
 		<key>UISceneConfigurations</key>

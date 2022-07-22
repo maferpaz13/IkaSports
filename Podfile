@@ -6,6 +6,7 @@ target 'IkaSports' do
   use_frameworks!
 
   pod 'Alamofire'
+  pod 'SDWebImage', '~> 5.0'
 
   # Pods for IkaSports
 

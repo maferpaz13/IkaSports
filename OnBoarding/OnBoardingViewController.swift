@@ -9,7 +9,7 @@ import UIKit
 import Foundation
 
 class OnBoardingViewController: UIViewController {
-    
+    //MARK: - IBOutlets
     @IBOutlet weak var Collection: UICollectionView!
     
     //MARK: - Properties
@@ -31,7 +31,8 @@ class OnBoardingViewController: UIViewController {
         ElementsArrayTutorial.append((titulo: "Find Your Favorite Teams", imagen: UIImage(named: "OnBoardingBasketball")!))
         
         Collection.reloadData()
-        
+        //Importante!!
+        //Inhabilitar el scroll del Collection y colocarlo en horizontal(en este caso)
         let swipeleft = UISwipeGestureRecognizer(target: self, action: #selector(self.Gesture(gesture:)))
         
         swipeleft.direction = .left
