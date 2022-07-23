@@ -15,6 +15,7 @@ class LigasViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var Buscador: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
+    
     //MARK: - IBActions
     @IBAction func BackButton(_ sender: Any) {
         
@@ -26,6 +27,7 @@ class LigasViewController: UIViewController, UITableViewDelegate, UITableViewDat
   
     var arrayligasSeleccionado :[(LigasModel.Leagues?)] = []
     var arrayligasSeleccionadoOriginal :[(LigasModel.Leagues?)] = []
+    var liga : String = ""
     
     //MARK: - Constants
 
@@ -36,6 +38,7 @@ class LigasViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.register(UINib(nibName: "LeaguesCell", bundle: nil), forCellReuseIdentifier: "Leagues")
         tableView.reloadData()
         Buscador.delegate = self
+        //Se agrega un addtarget al textfield para que llame la funcion cuando el campo se este editando
         Buscador.addTarget(self, action: #selector(self.myTextFieldDidChange), for: .editingChanged)
         hideKeyboardWhenTappedAround()
     }
@@ -59,39 +62,25 @@ class LigasViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
         }
     
+    //funcion encargada de filtrar el array de ligas con el uso de range
     func BuscarNombre(nombre:String, completion: @escaping (_ result: [(LigasModel.Leagues?)])->()){
             
             var local:[(LigasModel.Leagues?)] = []
-            let cad = nombre.lowercased()
+            let busqueda = nombre.lowercased()
             
-            if cad == "" || cad == " "{
+            if busqueda == "" || busqueda == " "{
                 
-                print("entre aca")
                 completion(arrayligasSeleccionadoOriginal)
                 
             }else{
                 
-                print("no era vacio")
-                
-                for t in arrayligasSeleccionadoOriginal{
+                for liga in arrayligasSeleccionadoOriginal{
                     
-                    var tag = ""
+                    let nombre = liga?.strLeague ?? ""
                     
-                    if t?.strLeague != "" {
+                    if nombre.lowercased().range(of:"\(busqueda)", options:[.caseInsensitive,.diacriticInsensitive]) != nil{
                         
-                        tag = "\(t?.strLeague!)"
-                        
-                        
-                    }else{
-                            
-                            tag = "N/A"
-                            
-                        }
-                        
-                    
-                    if tag.lowercased().range(of:"\(cad)", options:[.caseInsensitive,.diacriticInsensitive]) != nil{
-                        
-                        local.append(t)
+                        local.append(liga)
                         
                     
                 }
@@ -100,6 +89,24 @@ class LigasViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 completion(local)
             }
         }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showTeamss" {
+            let destinationVC = segue.destination as! TeamsViewController
+            destinationVC.liga = liga
+            }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let haveLiga = arrayligasSeleccionado[indexPath.row]?.strLeague {
+            print("si hay ligas")
+        liga = haveLiga
+        }
+        self.performSegue(withIdentifier: "showTeamss", sender: nil)
+        
+        return
+        
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let index = indexPath.row
@@ -110,6 +117,7 @@ class LigasViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.shadowView.clipsToBounds = true
         cell.vistaContenedora.layer.cornerRadius = 8
         cell.vistaContenedora.clipsToBounds = true
+        cell.selectionStyle = .none
        return cell
     }
     

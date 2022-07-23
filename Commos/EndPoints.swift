@@ -14,4 +14,5 @@ struct EndPoints {
 struct URLGet {
     static let Deportes = "/all_sports.php"
     static let Ligas = "/all_leagues.php"
+    static let TeamsinaLeague = "/search_all_teams.php"
 }

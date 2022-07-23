@@ -12,6 +12,7 @@ import Lottie
 
 var viewInfo = VistaInfo()
 
+//funcion para configurar la vista info de deportes para que esta pueda ser llamada desde cualquier parte del codigo, y al mismo instante generar las configuraciones basicas para el funcionamiento del mismo
 func showViewInfo(vista: UIViewController, info: String, titulo: String, closeAction: UITapGestureRecognizer) {
     
     viewInfo = (Bundle.main.loadNibNamed("VistaInfo", owner: vista, options: nil)?.first as? VistaInfo)!

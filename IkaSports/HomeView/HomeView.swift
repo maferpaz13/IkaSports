@@ -10,7 +10,7 @@ import SDWebImage
 import Alamofire
 import NotificationBannerSwift
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
+class HomeView: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
     //MARK: - IBOutlets
     @IBOutlet weak var Buscador: UITextField!
@@ -25,7 +25,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var arrayDeportesOriginal : [(DeportesModel.Sports?)] = []
     var arrayLigas : [(LigasModel.Leagues?)] = []
     var vistaInfo: VistaInfo!
-    var arrayligas :[(LigasModel.Leagues?)] = []
     var arrayligasSeleccionado :[(LigasModel.Leagues?)] = []
     var arrayligasSeleccionadoOriginal :[(LigasModel.Leagues?)] = []
     
@@ -37,6 +36,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         tableView.register(UINib(nibName: "DeportesCell", bundle: nil), forCellReuseIdentifier: "showDeportes")
         Buscador.delegate = self
+        //Se agrega un addtarget al textfield para que llame la funcion cuando el campo se este editando
         Buscador.addTarget(self, action: #selector(self.myTextFieldDidChange), for: .editingChanged)
         hideKeyboardWhenTappedAround()
         ObtenerInfo()
@@ -50,6 +50,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    //abre la vista de informacion de los deportes
     @objc func OpenView(_ sender: UIButton) {
         
         let index = sender.tag
@@ -77,39 +78,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
         }
     
+    
+    //funcion encargada de filtrar el array de deportes con el uso de range
     func BuscarNombre(nombre:String, completion: @escaping (_ result: [(DeportesModel.Sports?)])->()){
             
             var local:[(DeportesModel.Sports?)] = []
-            let cad = nombre.lowercased()
+            let busqueda = nombre.lowercased()
             
-            if cad == "" || cad == " "{
+            if busqueda == "" || busqueda == " "{
                 
-                print("entre aca")
                 completion(arrayDeportesOriginal)
                 
             }else{
                 
-                print("no era vacio")
-                
-                for t in arrayDeportesOriginal{
+                for deporte in arrayDeportesOriginal{
                     
-                    var tag = ""
+                    let nombre = deporte?.strSport ?? ""
                     
-                    if t?.strSport != "" {
+                    if nombre.lowercased().range(of:"\(busqueda)", options:[.caseInsensitive,.diacriticInsensitive]) != nil{
                         
-                        tag = "\(t?.strSport!)"
-                        
-                        
-                    }else{
-                            
-                            tag = "N/A"
-                            
-                        }
-                        
-                    
-                    if tag.lowercased().range(of:"\(cad)", options:[.caseInsensitive,.diacriticInsensitive]) != nil{
-                        
-                        local.append(t)
+                        local.append(deporte)
                         
                     
                 }
@@ -118,6 +106,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 completion(local)
             }
         }
+    
     //preparacion de liga seleccionada para mostrar en la siguiente pantalla
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showLigas" {
@@ -126,9 +115,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             destinationVC.arrayligasSeleccionadoOriginal = arrayligasSeleccionadoOriginal
             }
         }
-    //filtracion de ligas a partir de sus deportes
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        //filtracion de ligas a partir de sus deportes
         let sprtfilter = arrayLigas.filter{$0!.strSport == arrayDeportes[indexPath.row]?.strSport}
         
         if sprtfilter.indices.contains(0) {
@@ -155,7 +146,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.BackGroundView.clipsToBounds = true
         cell.InfoButtonOut.tag = index
         cell.InfoButtonOut.addTarget(self, action: #selector(self.OpenView(_:)), for: .touchUpInside)
-        //cell.selectionStyle = .none
+        cell.selectionStyle = .none
        return cell
         
         
@@ -192,6 +183,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 }
 
 extension UIViewController {
+    
+    //funcion para cerrar el teclado cuando se toque la pantalla
     func hideKeyboardWhenTappedAround() {
     let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
     tap.cancelsTouchesInView = false
