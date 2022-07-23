@@ -17,6 +17,8 @@
 		DDBBA07F288C3C260054E38E /* TeamsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDBBA07E288C3C260054E38E /* TeamsCell.xib */; };
 		DDBBA081288C3D260054E38E /* TeamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBBA080288C3D260054E38E /* TeamsTableViewCell.swift */; };
 		DDBBA083288C49190054E38E /* TeamsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBBA082288C49190054E38E /* TeamsStruct.swift */; };
+		DDBBA086288C52610054E38E /* TeamDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBBA085288C52610054E38E /* TeamDetailsViewController.swift */; };
+		DDBBA089288C71F70054E38E /* ImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBBA088288C71F70054E38E /* ImagesCollectionViewCell.swift */; };
 		DDC07E4E288B919B007319FC /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDC07E4D288B919B007319FC /* LoadingView.xib */; };
 		DDC07E50288B9602007319FC /* Animaciones in Resources */ = {isa = PBXBuildFile; fileRef = DDC07E4F288B9602007319FC /* Animaciones */; };
 		DDD57066288AED57009BDAC5 /* ValidationView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDD57065288AED57009BDAC5 /* ValidationView.storyboard */; };
@@ -85,6 +87,8 @@
 		DDBBA07E288C3C260054E38E /* TeamsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamsCell.xib; sourceTree = "<group>"; };
 		DDBBA080288C3D260054E38E /* TeamsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewCell.swift; sourceTree = "<group>"; };
 		DDBBA082288C49190054E38E /* TeamsStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsStruct.swift; sourceTree = "<group>"; };
+		DDBBA085288C52610054E38E /* TeamDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsViewController.swift; sourceTree = "<group>"; };
+		DDBBA088288C71F70054E38E /* ImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCollectionViewCell.swift; sourceTree = "<group>"; };
 		DDC07E4D288B919B007319FC /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		DDC07E4F288B9602007319FC /* Animaciones */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Animaciones; sourceTree = "<group>"; };
 		DDD57065288AED57009BDAC5 /* ValidationView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ValidationView.storyboard; sourceTree = "<group>"; };
@@ -222,6 +226,23 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		DDBBA084288C522D0054E38E /* TeamDetails */ = {
+			isa = PBXGroup;
+			children = (
+				DDBBA087288C71C30054E38E /* CollectionView */,
+				DDBBA085288C52610054E38E /* TeamDetailsViewController.swift */,
+			);
+			path = TeamDetails;
+			sourceTree = "<group>";
+		};
+		DDBBA087288C71C30054E38E /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				DDBBA088288C71F70054E38E /* ImagesCollectionViewCell.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
 		DDC07E48288B7DD9007319FC /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +332,7 @@
 				DDC07E48288B7DD9007319FC /* HomeView */,
 				DDC07E4B288B7E2C007319FC /* LeagueView */,
 				DDBBA071288C2EC10054E38E /* TeamsInaLeague */,
+				DDBBA084288C522D0054E38E /* TeamDetails */,
 				DDD666032889E93A00F2337B /* AppDelegate.swift */,
 				DDD666052889E93A00F2337B /* SceneDelegate.swift */,
 				DDD666092889E93A00F2337B /* Main.storyboard */,
@@ -646,6 +668,7 @@
 			files = (
 				DDBBA078288C398C0054E38E /* TeamsAPIClient.swift in Sources */,
 				DDD666082889E93A00F2337B /* HomeView.swift in Sources */,
+				DDBBA086288C52610054E38E /* TeamDetailsViewController.swift in Sources */,
 				DDD5707A288B42D7009BDAC5 /* LigasViewController.swift in Sources */,
 				DDBBA07C288C3A510054E38E /* TeamsViewModel.swift in Sources */,
 				DDD666042889E93A00F2337B /* AppDelegate.swift in Sources */,
@@ -659,6 +682,7 @@
 				DDD66652288A43C800F2337B /* LigasViewModel.swift in Sources */,
 				DDD57071288AF6D5009BDAC5 /* lottie.swift in Sources */,
 				DDD6664C288A434E00F2337B /* DeportesViewModel.swift in Sources */,
+				DDBBA089288C71F70054E38E /* ImagesCollectionViewCell.swift in Sources */,
 				DDBBA083288C49190054E38E /* TeamsStruct.swift in Sources */,
 				DDD57078288B06B7009BDAC5 /* VistaInfo.swift in Sources */,
 				DDBBA073288C35670054E38E /* TeamsViewController.swift in Sources */,

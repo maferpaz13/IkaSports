@@ -30,6 +30,7 @@ class TeamsViewController: UIViewController, UITextFieldDelegate, UITableViewDel
     var arrayTeamsOriginal : [(TeamsModel.Teams?)] = []
     var ViewModel = TeamsViewModel()
     var liga : String = ""
+    var infoteamselected: TeamsModel.Teams?
     
     //MARK: - Constants
 
@@ -43,6 +44,17 @@ class TeamsViewController: UIViewController, UITextFieldDelegate, UITableViewDel
         hideKeyboardWhenTappedAround()
         ObtenerInfo()
         
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetails" {
+            let destinationVC = segue.destination as! TeamDetailsViewController
+            destinationVC.infoteam = infoteamselected
+            }
+        
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        infoteamselected = arrayTeams[indexPath.row]
+        self.performSegue(withIdentifier: "showDetails", sender: nil)
     }
     
     func ObtenerInfo() {

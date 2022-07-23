@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -49,7 +50,7 @@
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="HJr-ce-kmm" firstAttribute="centerY" secondItem="Zm8-UC-HQJ" secondAttribute="centerY" id="6mN-0o-Dnx"/>
                                         <constraint firstAttribute="trailing" secondItem="Dte-pm-dUE" secondAttribute="trailing" constant="8" id="FWx-Mr-SqK"/>
@@ -72,7 +73,7 @@
                                     <subviews>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHp-fG-xGW">
                                             <rect key="frame" x="8" y="8" width="334" height="128"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="128" id="EBX-ay-o4Z"/>
                                             </constraints>
@@ -81,7 +82,7 @@
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="MHp-fG-xGW" secondAttribute="trailing" constant="8" id="Maz-jH-cUv"/>
                                         <constraint firstAttribute="bottom" secondItem="MHp-fG-xGW" secondAttribute="bottom" constant="8" id="Mj0-Oa-r3H"/>
@@ -90,9 +91,10 @@
                                     </constraints>
                                 </view>
                             </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" name="backgroundColorCell"/>
                     <constraints>
                         <constraint firstItem="WVi-Ae-GnE" firstAttribute="leading" secondItem="CS9-LB-Bf7" secondAttribute="leading" id="GaC-Qo-GYP"/>
                         <constraint firstAttribute="bottom" secondItem="WVi-Ae-GnE" secondAttribute="bottom" id="Yj4-n6-Bnx"/>
@@ -124,11 +126,11 @@
     </objects>
     <resources>
         <image name="cerca" width="32" height="32"/>
+        <namedColor name="backgroundColorCell">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
