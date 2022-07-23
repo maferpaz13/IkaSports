@@ -7,6 +7,8 @@ target 'IkaSports' do
 
   pod 'Alamofire'
   pod 'SDWebImage', '~> 5.0'
+  pod 'lottie-ios'
+  pod 'NotificationBannerSwift', '~> 3.0.0'
 
   # Pods for IkaSports
 
