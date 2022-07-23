@@ -24,8 +24,6 @@ func showViewInfo(vista: UIViewController, info: String, titulo: String, closeAc
     viewInfo.vistaContenida.layer.cornerRadius = 8
     viewInfo.vistaContenida.clipsToBounds = true
     let numofLine = viewInfo.InfoLabel.numberOfLine() + 1
-    print("numofLine \(numofLine)")
-    print("viewInfo.InfoLabel.font!.lineHeight \(viewInfo.InfoLabel.font!.lineHeight)")
     viewInfo.heightText.constant = CGFloat(numofLine > 26 ? 26 : numofLine) * (viewInfo.InfoLabel.font!.lineHeight + 2.8)
     viewInfo.cancelarButton.addGestureRecognizer(closeAction)
     viewInfo.isHidden = false

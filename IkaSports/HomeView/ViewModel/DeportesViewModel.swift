@@ -20,7 +20,6 @@ class DeportesViewModel {
                         
                         completion(data)
                     }else{
-                        print("no pude con el json")
                         completion(nil)
                     }
                 case .failure(_):

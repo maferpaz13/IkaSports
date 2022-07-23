@@ -16,7 +16,6 @@ class DeportesAPIClient{
         AF.request(EndPoints.domain+URLGet.Deportes, method: .get, encoding: JSONEncoding.default).responseData {
             
             (Result) in
-            print(Result.debugDescription)
             completion(Result)
         }
         

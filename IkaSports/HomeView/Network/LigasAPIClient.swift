@@ -16,7 +16,6 @@ class LigasAPIClient{
         AF.request(EndPoints.domain+URLGet.Ligas, method: .get, encoding: JSONEncoding.default).responseData {
             
             (Result) in
-            print(Result.debugDescription)
             
             completion(Result)
         }

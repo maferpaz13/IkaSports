@@ -15,7 +15,6 @@ class TeamsAPLIClient{
         AF.request(EndPoints.domain+URLGet.TeamsinaLeague,method: .get, parameters: parameters.dict).responseData  {
             
             (Result) in
-            print(Result.debugDescription)
             completion(Result)
         }
         

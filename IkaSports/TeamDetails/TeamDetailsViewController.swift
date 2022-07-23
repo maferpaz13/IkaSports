@@ -40,6 +40,7 @@ class TeamDetailsViewController: UIViewController {
     @IBOutlet weak var twitterButtonOut: UIButton!
     @IBOutlet weak var twitterOut: UIImageView!
     @IBOutlet weak var lineanetwork: UIView!
+    @IBOutlet weak var viewnetwork: UIView!
     //MARK: - IBActions
     @IBAction func moreInfo(_ sender: Any) {
         let closeAction = UITapGestureRecognizer(target: self, action: #selector(CloseView))
@@ -81,7 +82,6 @@ class TeamDetailsViewController: UIViewController {
     }
     @objc func CloseView(_ sender: UITapGestureRecognizer) {
         
-        print("si entre aqui")
         hideViewInfo(vista: self)
         
     }
@@ -105,34 +105,116 @@ class TeamDetailsViewController: UIViewController {
         self.websiteOut.setTitle(infoteam?.strWebsite, for: .normal)
         self.websiteOut.setTitleColor(.blue, for: .normal)
         
+        
+        
         //validacion si el estadio existe
-        self.addressStack.isHidden = infoteam?.strStadium == nil
-        self.lineaStadium.isHidden = infoteam?.strStadium == nil
+        if infoteam?.strStadium == nil {
+            self.addressStack.isHidden = true
+            self.lineaStadium.isHidden = true
+            
+        }else if infoteam?.strStadium == ""{
+            
+            self.addressStack.isHidden = true
+            self.lineaStadium.isHidden = true
+            
+        }
         
         //validacion si año de creacion existe
-        self.yearStack.isHidden = infoteam?.intFormedYear == nil
-        self.lineaYear.isHidden = infoteam?.intFormedYear == nil
-        
+        if infoteam?.intFormedYear == nil {
+            
+        self.yearStack.isHidden = true
+        self.lineaYear.isHidden = true
+            
+        }else if (infoteam?.intFormedYear!.count)! < 4{
+            
+            self.yearStack.isHidden = true
+            self.lineaYear.isHidden = true
+            
+        }
         //validacion si los campeonatos existen
         if infoteam?.strLeague == "" && infoteam?.strLeague2 == "" && infoteam?.strLeague3 == "" {
+            
             self.championstack.isHidden = true
             self.lineachampion.isHidden = true
         }
+        
         self.champion1.isHidden = infoteam?.strLeague == ""
         self.champion2.isHidden = infoteam?.strLeague2 == ""
         self.champion3.isHidden = infoteam?.strLeague3 == ""
         
+        if let champion1 = infoteam?.strLeague {
+            self.champion1.isHidden = champion1.contains("_No League")
+        }
+        if let champion2 = infoteam!.strLeague2 {
+            self.champion2.isHidden = champion2.contains("_No League")
+        }
+        if let champion3 = infoteam!.strLeague3 {
+            self.champion3.isHidden = champion3.contains("_No League")
+        }
+        
+        
+        
         //validacion si website existe
-        self.websiteOut.isHidden = infoteam?.strWebsite == nil
+        if infoteam?.strWebsite == nil {
+            
+            self.websiteOut.isHidden = true
+            
+        }else if infoteam?.strWebsite == "" {
+            
+            self.websiteOut.isHidden = true
+        }
+        
+        
         
         //validacion si social networks existen
-        self.instaOut.isHidden = infoteam?.strInstagram == nil
-        self.instaButtonOut.isHidden = infoteam?.strInstagram == nil
-        self.faceOut.isHidden = infoteam?.strFacebook == nil
-        self.FaceButtonOut.isHidden = infoteam?.strFacebook == nil
-        self.twitterOut.isHidden = infoteam?.strTwitter == nil
-        self.twitterButtonOut.isHidden = infoteam?.strTwitter == nil
+        if infoteam?.strInstagram == nil {
+            
+        self.instaOut.isHidden = true
+        self.instaButtonOut.isHidden = true
+            
+        }else if infoteam?.strInstagram == "" {
+            
+            self.instaOut.isHidden = true
+            self.instaButtonOut.isHidden = true
+        }
+        if infoteam?.strFacebook == nil {
+            
+            self.faceOut.isHidden = true
+            self.FaceButtonOut.isHidden = true
+            
+        }else if infoteam?.strFacebook == "" {
+            
+            
+            self.faceOut.isHidden = true
+            self.FaceButtonOut.isHidden = true
+            
+        }
+        
+        if infoteam?.strTwitter == nil {
+            
+            
+            self.twitterOut.isHidden = true
+            self.twitterButtonOut.isHidden = true
+            
+        }else if infoteam?.strTwitter == "" {
+            
+            self.twitterOut.isHidden = true
+            self.twitterButtonOut.isHidden = true
+            
+        }
+        
+        
+        if infoteam?.strInstagram == nil && infoteam?.strFacebook == nil && infoteam?.strTwitter == nil {
+            self.viewnetwork.isHidden = true
+        }else if infoteam?.strInstagram == "" && infoteam?.strFacebook == "" && infoteam?.strTwitter == "" {
+            self.viewnetwork.isHidden = true
+        }
+        
         if infoteam?.strWebsite == nil && infoteam?.strInstagram == nil && infoteam?.strFacebook == nil && infoteam?.strTwitter == nil {
+            self.networkStack.isHidden = true
+            self.lineanetwork.isHidden = true
+            
+        } else if infoteam?.strWebsite == "" && infoteam?.strInstagram == "" && infoteam?.strFacebook == "" && infoteam?.strTwitter == "" {
             self.networkStack.isHidden = true
             self.lineanetwork.isHidden = true
         }

@@ -184,11 +184,26 @@ class TeamsModel {
             strAlternate = try values.decodeIfPresent(String.self, forKey: .strAlternate)
             intFormedYear = try values.decodeIfPresent(String.self, forKey: .intFormedYear)
             strSport = try values.decodeIfPresent(String.self, forKey: .strSport)
-            strLeague = try values.decodeIfPresent(String.self, forKey: .strLeague)
+            do{
+                strLeague = try values.decodeIfPresent(String.self, forKey: .strLeague)
+                
+            }catch{
+                strLeague = ""
+            }
             idLeague = try values.decodeIfPresent(String.self, forKey: .idLeague)
-            strLeague2 = try values.decodeIfPresent(String.self, forKey: .strLeague2)
+            do{
+                strLeague2 = try values.decodeIfPresent(String.self, forKey: .strLeague2)
+                
+            }catch{
+                strLeague2 = ""
+            }
             idLeague2 = try values.decodeIfPresent(String.self, forKey: .idLeague2)
-            strLeague3 = try values.decodeIfPresent(String.self, forKey: .strLeague3)
+            do{
+                strLeague3 = try values.decodeIfPresent(String.self, forKey: .strLeague3)
+                
+            }catch{
+                strLeague3 = ""
+            }
             idLeague3 = try values.decodeIfPresent(String.self, forKey: .idLeague3)
             strLeague4 = try values.decodeIfPresent(String.self, forKey: .strLeague4)
             do{

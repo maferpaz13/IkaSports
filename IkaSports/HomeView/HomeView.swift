@@ -45,7 +45,6 @@ class HomeView: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     
     @objc func CloseView(_ sender: UITapGestureRecognizer) {
         
-        print("si entre aqui")
         hideViewInfo(vista: self)
         
     }
