@@ -4,6 +4,11 @@ alguna liga se mostrara los grupos que existe en esa liga para luego ver su Deta
 como: Nombre del equipo, nombre alternativo, logo del equipo, fotos FanArt, nombre del estadio
 y su ubicación, como tambien sus redes sociales y website.
 
+## Diagrama de flujo:
+<p align="center">
+  <img src="./Diagrama IkaSports.pdf" alt="Size Limit CLI" width="738">
+</p>
+
 ## Cocoapods integrados en IkaSports:
 
   * [Lottie](https://github.com/airbnb/lottie-ios): Cocoapod para la integracion de un 
