@@ -779,7 +779,7 @@
         <!--Navigation Controller-->
         <scene sceneID="nzN-sj-ePF">
             <objects>
-                <navigationController storyboardIdentifier="Main" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="PI4-ky-Jdi" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Main" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" navigationBarHidden="YES" id="PI4-ky-Jdi" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IXI-V8-Dgn">
                         <autoresizingMask key="autoresizingMask"/>

@@ -33,8 +33,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="BNz-dK-6AT" kind="presentation" identifier="showMain" modalPresentationStyle="fullScreen" id="1Lt-mI-NL9"/>
-                        <segue destination="cRH-fZ-2da" kind="presentation" identifier="showOnBoarding" modalPresentationStyle="fullScreen" id="qD4-xI-2PU"/>
+                        <segue destination="BNz-dK-6AT" kind="show" identifier="showMain" id="1Lt-mI-NL9"/>
+                        <segue destination="cRH-fZ-2da" kind="show" identifier="showOnBoarding" id="qD4-xI-2PU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
