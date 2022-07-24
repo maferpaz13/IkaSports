@@ -6,7 +6,7 @@ y su ubicación, como tambien sus redes sociales y website.
 
 ## Diagrama de flujo:
 <p align="center">
-  <img src="./Diagrama IkaSports.pdf" alt="Size Limit CLI" width="738">
+  <img src="./Diagrama IkaSports.pdf" alt="Diagrama" width="738">
 </p>
 
 ## Cocoapods integrados en IkaSports:
