@@ -165,6 +165,7 @@ class HomeView: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
                 self.arrayDeportes = arraySport
                 self.arrayDeportesOriginal = arraySport
                 self.tableView.reloadData()
+                
                 }
         }
         
